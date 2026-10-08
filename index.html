@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rima</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="gate">
+    <form id="gateForm" class="login">
+      <img class="brand-logo" src="logo.png" alt="Rima">
+      <p class="quiet">Put your subscription key here</p>
+      <label class="field">
+        <span>Key</span>
+        <input id="pass" type="password" autocomplete="current-password" placeholder="XXXX-XXXX-XXXX">
+      </label>
+      <button class="btn" type="submit">Enter</button>
+      <p id="gateMsg" class="msg"></p>
+    </form>
+  </div>
+  <div id="shell" hidden>
+    <aside>
+      <img class="brand-logo" src="logo.png" alt="Rima">
+      <p class="group">Main</p>
+      <button type="button" data-tab="people" class="nav on">Dashboard</button>
+      <button type="button" data-tab="codes" class="nav">Codes</button>
+      <button type="button" data-tab="subs" class="nav">Subscriptions</button>
+      <button type="button" data-tab="settings" class="nav">Settings</button>
+      <button type="button" id="leave" class="nav out">Log out</button>
+    </aside>
+    <main id="view"></main>
+  </div>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
